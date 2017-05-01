@@ -1,0 +1,44 @@
+.footer
+{
+  @extend .bg-primary05;
+
+
+  $root: '.footer';
+
+  #{$root}__inner
+  {
+    @extend .flex;
+    @extend .flex-between;
+    @extend .flex-middle;
+
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .copyright
+  {
+    @extend .f-xs;
+    @extend .c-grey00;
+  }
+
+  .social
+  {
+    .social__list
+    {
+
+      list-style: none;
+      @extend .p-none;
+
+      .social__item
+      {
+        @extend .inline;
+
+        .social__link
+        {
+          @extend .f-s;
+          @extend .c-grey00;
+        }
+      }
+    }
+  }
+}
