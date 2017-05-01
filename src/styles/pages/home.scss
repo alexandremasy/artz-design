@@ -41,19 +41,23 @@
       min-height: 450px;
       max-height: 800px;
 
-      max-width: 1000px;
+      max-width: 1400px;
       margin: auto;
+      margin-bottom: -15vh;
 
       @media (min-width: 425px) and (max-width: 695px)
       {
         background-position: center top;
         background-size: cover;
+
+        margin-bottom: -10vh;
       }
 
       @include media-down('s')
       {
         background-size: cover;
         background-position: center bottom;
+        margin-bottom: -10vh;
       };
 
       .welcome__logo
@@ -220,9 +224,13 @@
     {
       @extend .m-none;
       @extend .pt-xl;
-      @extend .pb-xl;
 
       @extend .text-center;
+    }
+
+    .heading2
+    {
+      @extend .pb-xl;
     }
 
     .contact__infos
@@ -233,11 +241,15 @@
       {
         @extend .block;
         @extend .heading2;
+        @extend .pb-none;
       }
     }
 
     .contact__cta
     {
+      @extend .pt-xl;
+      @extend .pb-xxl;
+
       @extend .text-center;
     }
   }
