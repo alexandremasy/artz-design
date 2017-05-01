@@ -11,7 +11,7 @@
   {
     .inner
     {
-      max-width: 700px;
+      max-width: 720px;
       margin: auto;
 
       &.-outset
@@ -35,8 +35,26 @@
     {
       background: url("../images/illustration.svg") no-repeat;
       background-size: 100%;
+      background-position: center bottom;
 
       height: 70vh;
+      min-height: 450px;
+      max-height: 800px;
+
+      max-width: 1000px;
+      margin: auto;
+
+      @media (min-width: 425px) and (max-width: 695px)
+      {
+        background-position: center top;
+        background-size: cover;
+      }
+
+      @include media-down('s')
+      {
+        background-size: cover;
+        background-position: center bottom;
+      };
 
       .welcome__logo
       {
@@ -55,6 +73,8 @@
     {
       .heading2
       {
+        @extend .pt-xxs;
+
         max-width: 500px;
         margin: auto;
       }
@@ -208,12 +228,17 @@
     .contact__infos
     {
       @extend .text-center;
-      
+
       a
       {
         @extend .block;
         @extend .heading2;
       }
+    }
+
+    .contact__cta
+    {
+      @extend .text-center;
     }
   }
 }
