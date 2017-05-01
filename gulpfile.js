@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var watch = require('gulp-watch');
 var connect = require('gulp-connect');
 
 ///////////////////////////////////////////////////////////////////
@@ -65,15 +64,12 @@ gulp.task('styles.prod', function(){
  *  Task: Styles [watch]
  *  Watch & build the sass files for development
  *
- *  @version 1.1
+ *  @version 1.2
  *  @author Alexandre Masy <hello@alexandremasy.com>
  **/
 gulp.task('styles.watch', ['styles.dev'], function()
 {
-  return watch('src/styles/**/*.scss', function()
-  {
-    gulp.start('styles.dev');
-  });
+  gulp.watch(['src/styles/**/*.scss'], ['styles.dev']);
 })
 
 ///////////////////////////////////////////////////////////////////
@@ -135,15 +131,12 @@ gulp.task('libs.prod', function(){
  *  Task: Libs [watch]
  *  Watch & build the libraries for development
  *
- *  @version 1.1
+ *  @version 1.2
  *  @author Alexandre Masy <hello@alexandremasy.com>
  **/
 gulp.task('libs.watch', ['libs.dev'], function()
 {
-  return watch('src/libs/**/*.js', function()
-  {
-    gulp.start('libs.dev');
-  });
+  gulp.watch(['src/libs/**/*.js'], ['libs.dev']);
 })
 
 ///////////////////////////////////////////////////////////////////
@@ -171,15 +164,12 @@ gulp.task('views', function()
  *  Task: Views [watch]
  *  Watch & build the pugjs files for production & development
  *
- *  @version 1.1
+ *  @version 1.2
  *  @author Alexandre Masy <hello@alexandremasy.com>
  **/
 gulp.task('views.watch', ['views'], function()
 {
-  return watch('src/views/**/*.pug', function()
-  {
-    gulp.start('views');
-  });
+  gulp.watch(['src/views/**/*.pug'], ['views']);
 })
 
 ///////////////////////////////////////////////////////////////////

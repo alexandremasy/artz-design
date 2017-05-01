@@ -18,11 +18,9 @@ $font-paragraph: '';
 
 @include typeface(null, null, 'Roboto', 'light', 300);
 @include typeface(null, null, 'Roboto', 'regular', 400);
-@include typeface(null, null, 'Roboto', 'bold', 700);
+@include typeface(null, null, 'Roboto', 'medium', 500);
 
-@include typeface(null, null, 'Asap', 'sherif-thin', 400);
-@include typeface(null, null, 'Asap', 'sherif-light', 400);
-@include typeface(null, null, 'Asap', 'sherif-regular', 700);
+@include typeface(null, null, 'PT Serif', 'heading', 400);
 
 ////////////////////////////////////////////////////
 //
