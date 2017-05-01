@@ -14,6 +14,12 @@
       max-width: 720px;
       margin: auto;
 
+      @include media-down('m')
+      {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+
       &.-outset
       {
         max-width: 1000px;
@@ -96,6 +102,10 @@
 
         @extend .text-left;
 
+        @include media-down('m')
+        {
+          flex-direction: column;
+        }
       }
 
       .offer__item
@@ -106,6 +116,12 @@
         &:last-child
         {
           @extend .mr-none;
+        }
+
+        @include media-down('m')
+        {
+          margin-right: 0;
+          padding-top: 24px;
         }
 
         .icon
@@ -192,6 +208,11 @@
           $grey02 8px,
           $grey02 9px
         );
+
+        @include media-down('s')
+        {
+          flex: 2;
+        }
       }
 
       .work__description
@@ -199,6 +220,11 @@
         flex: 1;
 
         @extend .pl-m;
+
+        @include media-down('s')
+        {
+          flex: 2;
+        }
 
         .work__title
         {
@@ -230,7 +256,7 @@
 
     .heading2
     {
-      @extend .pb-xl;
+      @extend .pb-l;
     }
 
     .contact__infos
@@ -239,9 +265,13 @@
 
       a
       {
-        @extend .block;
+        @extend .inline;
         @extend .heading2;
         @extend .pb-none;
+        @extend .pt-xs;
+
+        border-bottom: 1px solid $primary05;
+
       }
     }
 
