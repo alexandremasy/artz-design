@@ -2,6 +2,9 @@ language: node_js
 node_js:
   - node
 script: script/cibuild
+before_script:
+  - npm install -g bower
+cache: yarn
 deploy:
   provider: pages
   skip-cleanup: true
