@@ -1,12 +1,12 @@
 {
-  "name": "martine-styleguide",
+  "name": "artz-design",
   "version": "1.0.0",
-  "description": "Martine has her own Styleguide",
+  "description": "Artz Design website",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Afelio - Alexandre Masy",
+  "author": "Alexandre Masy",
   "devDependencies": {
     "del": "^2.2.2",
     "gulp": "latest",
