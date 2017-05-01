@@ -75,6 +75,35 @@ gulp.task('styles.watch', ['styles.dev'], function()
 ///////////////////////////////////////////////////////////////////
 
 /**
+ *  Task: Libs [vendor]
+ *  Concat the vendors libraries
+ *
+ *  @version 1.0
+ *  @author Alexandre Masy <hello@alexandremasy.com>
+ **/
+gulp.task('libs.vendor', function(){
+  var rename = require('gulp-rename');
+  var concat = require('gulp-concat');
+  var plumber = require('gulp-plumber');
+
+  var src = [
+    'var/vendor/jquery/dist/jquery.min.js'
+  ];
+
+  return gulp.src(src)
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('build/statics/libs/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/libs/'))
+  ;
+});
+
+/**
  *  Task: Libs [dev]
  *  Build the libraries for development
  *
@@ -228,7 +257,7 @@ gulp.task('connect', function()
  **/
 gulp.task('watch', ['clean'], function()
 {
-  gulp.start(['styles.watch', 'libs.watch', 'views.watch', 'statics', 'connect']);
+  gulp.start(['styles.watch', 'libs.vendor', 'libs.watch', 'views.watch', 'statics', 'connect']);
 });
 
 /**
@@ -240,7 +269,7 @@ gulp.task('watch', ['clean'], function()
  **/
 gulp.task('dev', ['clean'], function()
 {
-  gulp.start(['styles.dev', 'libs.dev', 'views', 'statics']);
+  gulp.start(['styles.dev', 'libs.vendor', 'libs.dev', 'views', 'statics']);
 });
 
 /**
@@ -252,7 +281,7 @@ gulp.task('dev', ['clean'], function()
  **/
 gulp.task('prod', ['clean'], function()
 {
-  gulp.start(['styles.prod', 'libs.prod', 'views', 'statics']);
+  gulp.start(['styles.prod', 'libs.vendor', 'libs.prod', 'views', 'statics']);
 });
 
 ///////////////////////////////////////////////////////////////////

@@ -20,6 +20,20 @@ a
   }
 }
 
+.heading1
+{
+  @extend .f-heading;
+  @extend .f-l;
+  @extend .c-grey06;
+}
+
+.heading2
+{
+  @extend .f-light;
+  @extend .f-m;
+  @extend .c-grey06;
+}
+
 p
 {
   @extend .m-none;

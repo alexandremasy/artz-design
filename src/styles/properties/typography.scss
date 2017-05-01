@@ -10,11 +10,11 @@ $font-regular: 'Roboto';
 $font-medium: 'Roboto';
 $font-semibold: 'Roboto';
 $font-bold: 'Roboto';
-$font-icon: 'alexandremasy-icons';
+$font-icon: 'artzdesign-icons';
 
 $font-paragraph: '';
 
-@include typeface('alexandremasy', 'alexandremasy', 'alexandremasy-icons', 'icons', 400);
+@include typeface('artzdesign', 'artzdesign', 'artzdesign-icons', 'icons', 400);
 
 @include typeface(null, null, 'Roboto', 'light', 300);
 @include typeface(null, null, 'Roboto', 'regular', 400);
@@ -65,23 +65,13 @@ $font-paragraph: '';
   -moz-osx-font-smoothing: grayscale;
 }
 
-$icon-codepen: "\e900";
-$icon-instagram: "\e901";
-$icon-linkedin: "\e902";
-$icon-twitter: "\e903";
-$icon-app: "\e904";
-$icon-connected: "\e905";
-$icon-product: "\e906";
-$icon-robots: "\e907";
+$icon-design: "\e900";
+$icon-spatula: "\e901";
+$icon-archive: "\e902";
 
-$icons: ("codepen", $icon-codepen),
-        ("instagram", $icon-instagram),
-        ("linkedin", $icon-linkedin),
-        ("twitter", $icon-twitter),
-        ("app", $icon-app),
-        ("connected", $icon-connected),
-        ("product", $icon-product),
-        ("robots", $icon-robots)
+$icons: ("design", $icon-design),
+        ("spatula", $icon-spatula),
+        ("archive", $icon-archive)
       ;
 
 @each $name, $ascii in $icons

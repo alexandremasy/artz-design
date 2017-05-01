@@ -8,7 +8,7 @@
 // Base font size for the body
 // Every rem and em size are computed from this value
 //
-$font-size-base: 18px;
+$font-size-base: 16px;
 
 //
 // Base line-height for the body
@@ -24,11 +24,11 @@ $line-height-base-max: 1.8;
 $font-sizes: (
   xxs:    (10px, 10px),
   xs:     (12px, 12px),
-  s:      (14px, 16px),
-  m:      (16px, 20px),
-  l:      (18px, 28px),
+  s:      (14px, 14px),
+  m:      (16px, 18px),
+  l:      (18px, 24px),
   xl:     (24px, 32px),
-  xxl:    (28px, 46px)
+  xxl:    (32px, 44px)
 );
 
 ////////////////////////////////////////////////////
