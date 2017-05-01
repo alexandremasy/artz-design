@@ -1,0 +1,18 @@
+#!/bin/sh
+
+
+# script/bootstrap: Resolve all dependencies that the application requires to
+#                   run.
+
+set -e
+cd "$(dirname "$0")/.."
+
+if [ -f "package.json" ]; then
+  echo "==> Installing NodeJS dependencies…"
+  npm install
+fi
+
+if [ -f "bower.json" ]; then
+  echo "==> Installing Bower dependencies…"
+  bower install
+fi
