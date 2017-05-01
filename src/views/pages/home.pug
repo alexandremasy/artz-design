@@ -5,5 +5,79 @@ block vars
   - layoutClass = 'layout-one-column'
 
 block body
-  section.primary
-    h1 Artz Design
+  //- --------------------------------------------------------------------------
+  //- 
+  //-     Welcome
+  //- 
+  //- --------------------------------------------------------------------------
+  section.welcome
+    article.welcome__illustration
+      h1.logo artz design
+    article.welcome__description
+      h2 Artisan ébéniste
+      h3 Je conçois et réalise avec vous des meubles, des cuisines équipées sur mesure au design personalisé.
+    article.welcome__offer
+      ul.offer__list
+        li.offer__item
+          span.icon.icon-spoon
+          div.offer__description
+            span.offer__itemtitle Cuisines équipées
+            span.offer__itemdescription Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        li.offer__item
+          span.icon.icon-furniture
+          div.offer__description
+            span.offer__itemtitle Meubles
+            span.offer__itemdescription Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        li.offer__item
+          span.icon.icon-design
+          div.offer__description
+            span.offer__itemtitle Design personalisé
+            span.offer__itemdescription Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    article.welcome__cta
+      a.btn(href="#") Obtenir un devis
+    
+  //- --------------------------------------------------------------------------
+  //- 
+  //-     Work
+  //- 
+  //- --------------------------------------------------------------------------
+  section.work
+    div.work__inner
+      h2 Réalisations récentes
+      
+      article.work__list
+        div.work__item
+          div.work__illustration
+            img(src="", alt="Table de salon en chêne")
+          div.work__description
+            div.work__title Table de salon en chêne
+            span.work__execpt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+        div.work__item
+          div.work__illustration
+            img(src="", alt="Cuisine équipée sur mesure en frêne")
+          div.work__description
+            div.work__title Cuisine équipée sur mesure en frêne
+            span.work__execpt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+        div.work__item
+          div.work__illustration
+            img(src="", alt="Escalier de coin")
+          div.work__description
+            div.work__title Escalier de coin
+            span.work__execpt Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+    
+  //- --------------------------------------------------------------------------
+  //- 
+  //-     Contact
+  //- 
+  //- --------------------------------------------------------------------------
+  section.contact
+    div.contact__inner
+      h2 Contact
+      h3 Un projet en tête ? Contacter moi, je me ferai un plaisir de vous accompagner dans toutes les étapes de votre projet.
+      
+      a(href="tel:+32 488 88 88 88") +32 488 88 88 88
+      a(href="mailto:benoit@artzdesign.com") benoit@artzdesign.com
+      
