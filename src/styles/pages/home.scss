@@ -28,6 +28,7 @@
   ////////////////////////////////////////////////////
   .welcome
   {
+    @extend .mb-xxl;
     @extend .text-center;
 
     .welcome__illustration
@@ -45,7 +46,7 @@
         background: url("/statics/images/logo.svg") no-repeat;
         width: 192px;
         height: 273px;
-        margin: 0 auto 0 auto;
+        margin: 0 auto;
         top: 10vh;
       }
     }
@@ -59,5 +60,77 @@
       }
     }
 
+    .welcome__offer
+    {
+      .offer__list
+      {
+        @extend .flex;
+
+        list-style: none;
+
+        @extend .text-left;
+
+      }
+
+      .offer__item
+      {
+        @extend .flex;
+        @extend .mr-l;
+
+        &:last-child
+        {
+          @extend .mr-none;
+        }
+
+        .icon
+        {
+          @extend .flex;
+          @extend .flex-center;
+          @extend .flex-middle;
+
+          $size: 44px;
+          width: $size;
+          min-width: $size;
+          height: $size;
+          min-height: $size;
+
+          @extend .mr-m;
+
+          border: 1px solid $grey01;
+          @extend .br-circle;
+
+          @extend .c-primary05;
+        }
+
+        .offer__itemtitle
+        {
+          @extend .block;
+          @extend .mb-s;
+
+          @extend .f-medium;
+          @extend .f-s;
+          @extend .c-grey05;
+        }
+
+        .offer__itemdescription
+        {
+          @extend .block;
+
+          @extend .f-light;
+          @extend .f-xs;
+          @extend .c-grey05;
+        }
+      }
+    }
+  }
+
+  ////////////////////////////////////////////////////
+  //
+  //    Work
+  //
+  ////////////////////////////////////////////////////
+  .work
+  {
+    background: $grey01;
   }
 }

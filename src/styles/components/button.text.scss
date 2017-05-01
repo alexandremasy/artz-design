@@ -6,30 +6,18 @@
   //
   ////////////////////////////////////////////////////
 
-  @extend .inline;
-
-  @extend .pl-m;
-  @extend .pr-m;
   @extend .pt-s;
+  @extend .pr-xl;
   @extend .pb-s;
+  @extend .pl-xl;
 
-  @extend .bg-accent00;
-  @extend .bw-none;
-  @extend .br-m;
+  @extend .br-xxl;
+  @extend .bg-primary05;
 
-  @extend .text-center;
-
-  color: transparentize($grey09, .40);
-  transition: background .3s, transform .3s;
+  @extend .c-grey00;
+  @extend .f-s;
 
   $root: '.btn';
-
-  #{$root}__value
-  {
-    @extend .w-100;
-
-    opacity: .7;
-  }
 
   &:hover,
   &:focus
@@ -54,47 +42,5 @@
   {
     cursor: not-allowed;
     opacity: .5;
-  }
-
-  ////////////////////////////////////////////////////
-  //
-  //                  Sizes
-  //
-  ////////////////////////////////////////////////////
-
-  &.-l
-  {
-    @extend .w-100;
-    @extend .text-center;
-
-    height: 41px;
-    text-transform: uppercase;
-
-    #{$root}__value
-    {
-      align-self: center;
-    }
-  }
-
-  ////////////////////////////////////////////////////
-  //
-  //                  Actions
-  //
-  ////////////////////////////////////////////////////
-
-  &.-positive
-  {
-    @extend .bg-accent00;
-  }
-
-  &.-negative
-  {
-    @extend .bg-accent01;
-
-    &:hover,
-    &:focus
-    {
-      background: #ff0000;
-    }
   }
 }

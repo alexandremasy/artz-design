@@ -34,6 +34,26 @@ a
   @extend .c-grey06;
 }
 
+.section-divider
+{
+  &::after
+  {
+    content: "";
+
+    display: block;
+
+    @extend .mt-xl;
+    @extend .mb-xl;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 1px;
+    width: 64px;
+
+    @extend .bg-primary05;
+  }
+}
+
 p
 {
   @extend .m-none;

@@ -4,8 +4,8 @@ files:
   include: '**/*.s+(a|c)ss'
 rules:
   # Extends
-  extends-before-mixins: 1
-  extends-before-declarations: 1
+  extends-before-mixins: 0
+  extends-before-declarations: 0
   placeholder-in-extend: 0
 
   # Mixins
