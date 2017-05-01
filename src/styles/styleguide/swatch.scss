@@ -1,0 +1,111 @@
+.styleguide
+{
+  $root: '.swatch';
+
+  .swatch
+  {
+    $border-radius: 3px;
+
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .05);
+    border-radius: $border-radius;
+    background: $sg-boxbg;
+
+    #{$root}__body
+    {
+      background: white;
+      border-top: 1px solid $sg-border;
+      border-left: 1px solid $sg-border;
+      border-right: 1px solid $sg-border;
+      border-radius: $border-radius $border-radius 0 0;
+      padding: 15px;
+      overflow: auto;
+
+      &.--overflow-disabled
+      {
+        overflow: inherit;
+      }
+
+      .label--superlarge
+      {
+        display: inline-block;
+        width: 10000px;
+      }
+
+      &.--dark
+      {
+        background: $sg-text-normal;
+      }
+    }
+
+    #{$root}__footer
+    {
+      background: $sg-boxbg;
+      border: 1px solid $sg-border;
+      border-radius: 0 0 $border-radius $border-radius;
+      padding: 15px;
+
+      .label
+      {
+        font-size: 1rem;
+      }
+
+      pre
+      {
+        margin: 0;
+
+        .hljs
+        {
+          border: 0;
+          box-shadow: none;
+          padding: 0;
+        }
+      }
+    }
+
+    #{$root}__footer + #{$root}__footer
+    {
+      border-top: 0;
+    }
+
+    .legend
+    {
+
+      display: block;
+      font-size: 1rem;
+      margin-top: 5px;
+      color: $sg-highlight;
+    }
+
+    //////////////////////
+    //  Variations
+    //////////////////////
+    &#{$root}--color
+    {
+      #{$root}__body
+      {
+        width: 100%;
+        min-height: 75px;
+        background: currentColor;
+      }
+    }
+
+    &#{$root}--icon
+    {
+      #{$root}__body
+      {
+        font-size: 120px;
+      }
+    }
+
+    &#{$root}--typography
+    {
+      .swatch__body
+      {
+        span
+        {
+          margin: 0 3px;
+        }
+      }
+    }
+  }
+}

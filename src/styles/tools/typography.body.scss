@@ -1,0 +1,26 @@
+@mixin body-font
+{
+  $min: map-get($responsive-breakpoints, 'xxs');
+  $max: map-get($responsive-breakpoints, 'xxl');
+
+  $fmin: $font-size-base;
+  $fmax: $font-size-base + $font-size-scale;
+
+  $lmin: $line-height-base-min * 1px;
+  $lmax: $line-height-base-max * 1px;
+
+  font-size: calc(#{$fmin} + (#{$fmax/1px} - #{$fmin/1px}) * ((100vw - #{$min}) / ( #{$max/1px} - #{$min/1px})));
+  line-height: calc(#{$lmin} + (#{$lmax} - #{$lmin/1px}) * ((100vw - #{$min}) / ( #{$max/1px} - #{$min/1px})));
+
+  @include media-up('xxl')
+  {
+    font-size: $fmax;
+    line-height: #{$lmax/1px};
+  }
+
+  @include media-down('xxs')
+  {
+    font-size: $fmin;
+    line-height: #{$lmin/1px};
+  };
+}

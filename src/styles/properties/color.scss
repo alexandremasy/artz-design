@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////
+//
+//              1. primary
+//
+////////////////////////////////////////////////////
+
+$primary05: #57edd4;
+$primary10: #004541;
+
+$primary: (
+  primary05: $primary05,
+  primary10: $primary10
+);
+
+////////////////////////////////////////////////////
+//
+//              2. grey
+//
+////////////////////////////////////////////////////
+
+$transparent: transparent;
+$current: currentColor;
+$grey00: #fff;
+$grey01: #E5E5E5;
+$grey02: #CBCBCB;
+$grey03: #B1B1B1;
+$grey04: #979797;
+$grey05: #7E7E7E;
+$grey06: #646464;
+$grey07: #4B4B4B;
+$grey08: #323232;
+$grey09: #191919;
+$grey10: #0A0A0A;
+
+$grey: (
+  grey00: $grey00,
+  grey01: $grey01,
+  grey02: $grey02,
+  grey03: $grey03,
+  grey04: $grey04,
+  grey05: $grey05,
+  grey06: $grey06,
+  grey07: $grey07,
+  grey08: $grey08,
+  grey09: $grey09,
+  grey10: $grey10
+);
+
+////////////////////////////////////////////////////
+//
+//              3. accent
+//
+////////////////////////////////////////////////////
+
+$accent00: #FFCD00;
+
+$accent: (
+  accent00: $accent00
+);
+
+////////////////////////////////////////////////////
+//
+//              5. Utility
+//
+////////////////////////////////////////////////////
+
+$palettes: map-merge($primary, map-merge($grey, $accent));
+
+@include color-utility('transparent', $transparent);
+@include color-utility('current', $current);
+@each $name, $property in $palettes
+{
+  @include color-utility(#{$name}, $property);
+}

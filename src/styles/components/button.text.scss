@@ -1,0 +1,100 @@
+.btn
+{
+  ////////////////////////////////////////////////////
+  //
+  //                  Global
+  //
+  ////////////////////////////////////////////////////
+
+  @extend .inline;
+
+  @extend .pl-m;
+  @extend .pr-m;
+  @extend .pt-s;
+  @extend .pb-s;
+
+  @extend .bg-accent00;
+  @extend .bw-none;
+  @extend .br-m;
+
+  @extend .text-center;
+
+  color: transparentize($grey09, .40);
+  transition: background .3s, transform .3s;
+
+  $root: '.btn';
+
+  #{$root}__value
+  {
+    @extend .w-100;
+
+    opacity: .7;
+  }
+
+  &:hover,
+  &:focus
+  {
+    background: #afde59;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:active
+  {
+    transform: scale(.98);
+  }
+
+  ////////////////////////////////////////////////////
+  //
+  //                  States
+  //
+  ////////////////////////////////////////////////////
+  &.-disabled,
+  &:disabled
+  {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+
+  ////////////////////////////////////////////////////
+  //
+  //                  Sizes
+  //
+  ////////////////////////////////////////////////////
+
+  &.-l
+  {
+    @extend .w-100;
+    @extend .text-center;
+
+    height: 41px;
+    text-transform: uppercase;
+
+    #{$root}__value
+    {
+      align-self: center;
+    }
+  }
+
+  ////////////////////////////////////////////////////
+  //
+  //                  Actions
+  //
+  ////////////////////////////////////////////////////
+
+  &.-positive
+  {
+    @extend .bg-accent00;
+  }
+
+  &.-negative
+  {
+    @extend .bg-accent01;
+
+    &:hover,
+    &:focus
+    {
+      background: #ff0000;
+    }
+  }
+}

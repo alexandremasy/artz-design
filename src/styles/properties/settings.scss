@@ -1,0 +1,124 @@
+////////////////////////////////////////////////////
+//
+//              1. Typography
+//
+////////////////////////////////////////////////////
+
+//
+// Base font size for the body
+// Every rem and em size are computed from this value
+//
+$font-size-base: 18px;
+
+//
+// Base line-height for the body
+// Every rem and em size are computed from this value
+//
+$line-height-base-min: 1.15;
+$line-height-base-max: 1.8;
+
+//
+//  Font grid ratio
+//  (minsize, maxsize)
+//
+$font-sizes: (
+  xxs:    (10px, 10px),
+  xs:     (12px, 12px),
+  s:      (14px, 16px),
+  m:      (16px, 20px),
+  l:      (18px, 28px),
+  xl:     (24px, 32px),
+  xxl:    (28px, 46px)
+);
+
+////////////////////////////////////////////////////
+//
+//              2. Grid
+//
+////////////////////////////////////////////////////
+
+//
+// Base grid size
+// Every padding margin are computed from this value
+//
+$grid-base:  $font-size-base;
+
+//
+//  Grid ratio
+//  Theses ratio are used to compute the grid sizes based on the grid-base
+//  @see https://www.dropbox.com/s/m3707qgpebnl91e/css-grid-ratio.xlsx?dl=0
+//
+$grid-unit: 1em;
+$grid-xxs:  .25;
+$grid-xs:   .5;
+$grid-s:    .75;
+$grid-m:    1;
+$grid-l:    1.5;
+$grid-xl:   2;
+$grid-xxl:  4;
+
+//
+//  Responsive steps
+//  Steps defined in the responsive utility
+$responsive-breakpoints: (
+  "xxs":  320px,
+  "xs":   375px,
+  "s":    425px,
+  "m":    768px,
+  "l":    1024px,
+  "xl":   1200px,
+  "xxl":  1440px
+);
+
+////////////////////////////////////////////////////
+//
+//              3. Border
+//
+////////////////////////////////////////////////////
+
+//
+// Base border size
+// Every border width and radius are computed from this value
+//
+$border-base: 2;
+
+//
+// Border radius multiplier
+// A multiplier is applied on top of the ratio to compute the size of the radius
+//
+$border-radius-multiplier: 2;
+
+//
+// Shadow multiplier
+// A multiplier is applied on top of the ratio to compute the size of the shadow
+//
+$box-shadow-multiplier: 2.45;
+
+//
+// Shadow color
+// The shadow color that will be used
+//
+$box-shadow-color: transparentize($grey10, .8);
+
+//
+//  Border ratio
+//  Theses ratio are used to compute the border sizes and radius based on the border-base
+//  @see https://www.dropbox.com/s/m3707qgpebnl91e/css-grid-ratio.xlsx?dl=0
+//
+$border-xxs:  .5;
+$border-xs:   .75;
+$border-s:    .875;
+$border-m:    1;
+$border-l:    2;
+$border-xl:   3;
+$border-xxl:  5;
+$border-xxxl: 6;
+
+
+////////////////////////////////////////////////////
+//
+//              4. Path
+//
+////////////////////////////////////////////////////
+
+$image-path: '/build/images/';

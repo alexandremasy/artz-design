@@ -1,0 +1,47 @@
+//
+//  Font-size
+//  Compute the font size based on the settings
+//
+//  @param $font-size Number    The font-sizes
+//
+@mixin font-size($font-size)
+{
+  $fmin: nth($font-size, 1);
+  $fmax: nth($font-size, 2);
+
+  $rmin: map-get($responsive-breakpoints, 'xxs');
+  $rmax: map-get($responsive-breakpoints, 'xxl');
+
+  $lmin: $line-height-base-min;
+  $lmax: $line-height-base-max;
+
+  font-size: calc(#{$fmin} + (#{$fmax/1px} - #{$fmin/1px}) * ((100vw - #{$rmin}) / ( #{$rmax/1px} - #{$rmin/1px})));
+  line-height: $lmax;
+
+  @include media-up('xxl')
+  {
+    font-size: $fmax;
+    line-height: #{$lmin};
+  }
+
+  @include media-down('xxs')
+  {
+    font-size: $fmin;
+    line-height: #{$lmax};
+  };
+}
+
+//
+//  Font Utility
+//  Generate the utility classes for the font-sizes
+//
+//  @param $name String   The name of the utility left hand
+//  @param $ratio Number  The ratio to use
+//
+@mixin font-utility($name, $ratio)
+{
+  .f-#{$name}
+  {
+    @include font-size($ratio);
+  }
+}

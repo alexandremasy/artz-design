@@ -1,0 +1,95 @@
+@charset 'utf-8';
+
+////////////////////////////////////////////////////
+//
+//              1. Typefaces
+//
+////////////////////////////////////////////////////
+$font-light: 'Roboto';
+$font-regular: 'Roboto';
+$font-medium: 'Roboto';
+$font-semibold: 'Roboto';
+$font-bold: 'Roboto';
+$font-icon: 'alexandremasy-icons';
+
+$font-paragraph: '';
+
+@include typeface('alexandremasy', 'alexandremasy', 'alexandremasy-icons', 'icons', 400);
+
+@include typeface(null, null, 'Roboto', 'light', 300);
+@include typeface(null, null, 'Roboto', 'regular', 400);
+@include typeface(null, null, 'Roboto', 'bold', 700);
+
+@include typeface(null, null, 'Asap', 'sherif-thin', 400);
+@include typeface(null, null, 'Asap', 'sherif-light', 400);
+@include typeface(null, null, 'Asap', 'sherif-regular', 700);
+
+////////////////////////////////////////////////////
+//
+//              2. Sizes
+//
+////////////////////////////////////////////////////
+@include font-utility('xxs',  map-get($font-sizes, xxs));
+@include font-utility('xs',   map-get($font-sizes, xs));
+@include font-utility('s',    map-get($font-sizes, s));
+@include font-utility('m',    map-get($font-sizes, m));
+@include font-utility('l',    map-get($font-sizes, l));
+@include font-utility('xl',   map-get($font-sizes, xl));
+@include font-utility('xxl',  map-get($font-sizes, xxl));
+
+////////////////////////////////////////////////////
+//
+//              3. Alignement
+//
+////////////////////////////////////////////////////
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+////////////////////////////////////////////////////
+//
+//              4. Icons
+//
+////////////////////////////////////////////////////
+[class^="icon-"],
+[class*=" icon-"],
+.icon {
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: $font-icon !important;
+  speak: none;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$icon-codepen: "\e900";
+$icon-instagram: "\e901";
+$icon-linkedin: "\e902";
+$icon-twitter: "\e903";
+$icon-app: "\e904";
+$icon-connected: "\e905";
+$icon-product: "\e906";
+$icon-robots: "\e907";
+
+$icons: ("codepen", $icon-codepen),
+        ("instagram", $icon-instagram),
+        ("linkedin", $icon-linkedin),
+        ("twitter", $icon-twitter),
+        ("app", $icon-app),
+        ("connected", $icon-connected),
+        ("product", $icon-product),
+        ("robots", $icon-robots)
+      ;
+
+@each $name, $ascii in $icons
+{
+  #{".icon-"+$name}::before
+  {
+    content: unicode($ascii);
+  }
+}

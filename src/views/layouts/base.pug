@@ -1,0 +1,32 @@
+block vars
+  - bodyClass = ''
+  - layoutClass = 'base'
+
+doctype html
+html
+  head
+    block title
+      title Artz Design
+
+    meta(charset="utf-8")
+    meta(http-equiv="content-type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="application-name" content="Alexandre Masy")
+    link(rel="icon" href="favicon.ico")
+    link(rel="apple-touch-icon", sizes="72x72", href="statics/icons/apple-touch-icon-72x72-precomposed.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="statics/icons/apple-touch-icon-120x120-precomposed.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="statics/icons/apple-touch-icon-152x152-precomposed.png")
+    link(rel="apple-touch-icon", sizes="64x64", href="statics/icons/favicon.ico@4x.png")
+    link(rel="apple-touch-icon", sizes="48x48", href="statics/icons/favicon.ico@3x.png")
+    link(rel="apple-touch-icon", sizes="32x32", href="statics/icons/favicon.ico@2x.png")
+    link(rel="apple-touch-icon", sizes="24x24", href="statics/icons/favicon.ico@1,5x.png")
+    link(href="/statics/styles/app.css", type="text/css", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Asap:400,700|Roboto:300,400,700", rel="stylesheet")
+
+    script(type="text/javascript", src="/statics/libs/vendor.js")
+    script(type="text/javascript", src="/statics/libs/app.js")
+    block pagescripts
+
+  body(class=bodyClass, class=layoutClass)
+    main.main
+      block content

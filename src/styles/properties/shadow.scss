@@ -1,0 +1,19 @@
+////////////////////////////////////////////////////
+//
+//              1. Box-Shadow
+//
+////////////////////////////////////////////////////
+
+@include shadow-utility('xxs',  $border-xxs);
+@include shadow-utility('xs',   $border-xs);
+@include shadow-utility('s',    $border-s);
+@include shadow-utility('m',    $border-m);
+@include shadow-utility('l',    $border-l);
+@include shadow-utility('xl',   $border-xl);
+@include shadow-utility('xxl',  $border-xxl);
+@include shadow-utility('xxxl', $border-xxxl);
+
+.bs-none
+{
+  box-shadow: none;
+}

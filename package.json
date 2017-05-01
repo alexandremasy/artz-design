@@ -1,0 +1,25 @@
+{
+  "name": "martine-styleguide",
+  "version": "1.0.0",
+  "description": "Martine has her own Styleguide",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Afelio - Alexandre Masy",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cache": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "^5.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-plumber": "latest",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "^4.3.11"
+  }
+}

@@ -1,0 +1,36 @@
+.box
+{
+  $height: 100%;
+
+  &.parent
+  {
+
+    height: $height;
+
+    &.parent--medium
+    {
+      height: 50px;
+    }
+
+    &.parent--large
+    {
+      height: 150px;
+    }
+  }
+
+  .child
+  {
+    background-color: $sg-border;
+    min-height: 16px;
+
+    &.child--border
+    {
+      border: 1px solid $sg-border;
+    }
+
+    &.child--fifty
+    {
+      height: 50%;
+    }
+  }
+}

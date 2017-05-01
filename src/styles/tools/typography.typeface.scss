@@ -1,0 +1,42 @@
+//  Make the typeface available
+//  1. declare the font-face
+//  2. create the utility classes
+//
+//  @param $family Font family
+//  @param $filename Name of the file
+//  @param $fontname Name of the font in the css
+@mixin typeface($family, $filename, $fontname, $shortname, $weight)
+{
+  @if $family != null
+  {
+    $filepath: '../fonts/' + $family + '/' + $filename;
+
+      // scss-lint:disable all
+      @font-face{
+        font-family: $fontname;
+        src: url( $filepath + '.eot');
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+    @font-face{
+      font-family: $fontname;
+      src: url($filepath+'.woff') format('woff'),
+      url($filepath+'.svg#'+$fontname) format('svg');
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    // scss-lint:enable all
+    // @font-face{
+    //   font-family: $fontname;
+    //   src: url($filepath+'.woff2') format('woff2');
+    //   -webkit-font-smoothing: antialiased;
+    //   -moz-osx-font-smoothing: grayscale;
+    // }
+  }
+
+  .f-#{$shortname}{
+    font-family: $fontname;
+    font-weight: $weight;
+  }
+}
