@@ -1,5 +1,5 @@
 # Artz Design – Website [![Build Status](https://travis-ci.org/alexandremasy/artz-design.svg?branch=master)](https://travis-ci.org/alexandremasy/artz-design)
-> Website for a independent carpenter
+> Website for a independent carpenter – Design Artz
 
 <https://alexandremasy.github.io/artz-design/>
 
