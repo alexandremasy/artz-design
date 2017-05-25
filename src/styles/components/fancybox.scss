@@ -1,0 +1,113 @@
+.ad {
+	display: none;
+}
+
+@media all and (min-width: 800px) {
+
+	.fancybox-custom-layout {
+		border: 20px solid $grey08;
+	}
+
+	.fancybox-custom-layout .fancybox-bg,
+	.fancybox-custom-layout.fancybox-container--ready .fancybox-bg {
+		background: $grey09;
+		opacity: 1;
+	}
+
+	.fancybox-custom-layout .fancybox-controls {
+		opacity: 1;
+		position: absolute;
+		top: 0;
+		left: auto;
+		right: 0;
+		bottom: 0;
+		width: 44px;
+		background: #5E4950;
+	}
+
+	.fancybox-custom-layout .fancybox-button {
+		background: transparent;
+	}
+
+	.fancybox-custom-layout .fancybox-buttons button:hover {
+		background: rgba(20, 20, 20, 0.4);
+	}
+
+	.fancybox-custom-layout .fancybox-caption-wrap {
+		top: 0;
+		right: 44px;
+		bottom: 0;
+		left: auto;
+		width: 250px;
+		padding: 0;
+		box-shadow: none;
+		background: $grey01;
+    font-family: $font-regular;
+    font-weight: bold;;
+
+		/* Disable transitions */
+		opacity: 1;
+		visibility: visible;
+		-webkit-transition: none;
+		   -moz-transition: none;
+		        transition: none;
+	}
+
+	.fancybox-custom-layout .fancybox-caption {
+		border: 0;
+		padding: 50px 15px;
+		color: $grey05;
+    font-size: 14px;
+	}
+
+	.fancybox-custom-layout .fancybox-slider-wrap {
+		right: 294px;
+	}
+
+	.fancybox-custom-layout.fancybox-container--thumbs .fancybox-controls {
+		right: 220px;
+	}
+
+	.fancybox-custom-layout.fancybox-container--thumbs .fancybox-slider-wrap {
+		right: 514px;
+	}
+
+	.fancybox-custom-layout.fancybox-container--thumbs .fancybox-caption-wrap {
+		right: 264px;
+	}
+
+	.fancybox-custom-layout .fancybox-thumbs {
+		top: 0;
+		bottom: 0;
+		background: $grey08;
+	}
+
+	.fancybox-custom-layout .fancybox-thumbs > ul > li {
+		border-color: $grey08;
+	}
+
+	/* Border around active element */
+	.fancybox-custom-layout .fancybox-thumbs > ul > li::before {
+		border-color: $grey08;
+	}
+
+	.ad {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 15px;
+		color: #fff;
+	}
+
+	.ad p {
+		margin-top: 0px;
+		margin-bottom: 5px;
+		font-size: 12px;
+	}
+
+	.ad p a {
+		color: #fff;
+	}
+
+}
