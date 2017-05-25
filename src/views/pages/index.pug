@@ -50,21 +50,53 @@ block body
       article.work__list
         div.work__item
           div.work__illustration
-            img(src="/statics/images/work/bureau01-01.jpg", alt="Table de salon en chêne")
+            a( href="/statics/images/work/bureau01-01-large.jpg", 
+               data-fancybox="cl-group-bureau01",
+               data-caption="Table de salon en chêne" 
+               data-thumb="/statics/images/work/bureau01-01-small.jpg")
+               img(src="/statics/images/work/bureau01-01-small.jpg", alt="Table de salon en chêne")
+              
           div.work__description
             div.work__title Table de salon en chêne
             span.work__except Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     
         div.work__item
           div.work__illustration
-            img(src="/statics/images/work/cuisine01-01.jpg", alt="Cuisine équipée sur mesure en frêne")
+            a( href="/statics/images/work/cuisine01-01-large.jpg", 
+               data-fancybox="cl-group-cuisine01",
+               data-caption="Table de salon en chêne" 
+               data-thumb="/statics/images/work/cuisine01-01-small.jpg")
+               img(src="/statics/images/work/cuisine01-01-small.jpg", alt="Cuisine équipée sur mesure en frêne")
+            div.hidden
+              - var n = 1;
+              while n++ < 3
+                a(
+                  data-fancybox="cl-group-cuisine01", 
+                  data-caption="Table de salon en chêne", 
+                  data-thumb="/statics/images/work/cuisine01-0"+n+"-small.jpg", 
+                  href="/statics/images/work/cuisine01-0"+n+"-large.jpg")
+                  img(src="/statics/images/work/cuisine01-0"+n+"-small.jpg", alt="Table de salon en chêne")
           div.work__description
             div.work__title Cuisine équipée sur mesure en frêne
             span.work__except Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     
         div.work__item
           div.work__illustration
-            img(src="/statics/images/work/cuisine04-01.jpg", alt="Escalier de coin")
+            a( href="/statics/images/work/cuisine04-01-large.jpg", 
+               data-fancybox="cl-group-cuisine04",
+               data-caption="Table de salon en chêne" 
+               data-thumb="/statics/images/work/cuisine04-01-small.jpg")
+               img(src="/statics/images/work/cuisine04-01-small.jpg", alt="Escalier de coin")
+                 
+          div.hidden
+            - var n = 1;
+            while n++ < 3
+              a(
+                data-fancybox="cl-group-cuisine04", 
+                data-caption="Table de salon en chêne", 
+                data-thumb="/statics/images/work/cuisine04-0"+n+"-small.jpg", 
+                href="/statics/images/work/cuisine04-0"+n+"-large.jpg")
+                img(src="/statics/images/work/cuisine04-0"+n+"-small.jpg", alt="Table de salon en chêne")
           div.work__description
             div.work__title Escalier de coin
             span.work__except Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
